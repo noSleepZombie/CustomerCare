@@ -19,7 +19,15 @@ namespace CustomerCare.UnitTests.Services
                 Password = "My$trongPassw0rd",
                 Name = "John Doe",
                 Email = "myemail@emailservice.com",
-                Phone = "11944554455"
+                Phone = "11944554455",
+                Address = new() {
+                    Street = "Av. Jundiaí",
+                    Number = "1234",
+                    District = "Anhangabaú",
+                    City = "Jundiaí",
+                    State = "SP",
+                    ZipCode = "13218150"
+                }
             };
 
             var validator = new Mock<IValidator<User>>();

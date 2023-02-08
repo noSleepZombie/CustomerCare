@@ -13,7 +13,21 @@ namespace CustomerCare.Application.Mappings
                 Password = model.Password,
                 Email = model.Email,
                 Name = model.Name,
-                Phone = model.Phone
+                Phone = model.Phone,
+                Address = model.Address?.MapToEntity() ?? new()
+            };
+        }
+
+        public static Address MapToEntity(this CreateUserAddressRequest model)
+        {
+            return new Address
+            {
+                Street = model.Street,
+                Number = model.Number,
+                District = model.District,
+                City = model.City,
+                State = model.State,
+                ZipCode = model.ZipCode
             };
         }
     }

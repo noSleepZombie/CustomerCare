@@ -27,9 +27,9 @@ namespace CustomerCare.Application.Services
             entity.Salt = salt;
             entity.CreatedAt = DateTime.Now;
 
-            await unitOfWork.UserRepository.Create(entity);
+            await unitOfWork.UserRepository.Create(entity);  
             await unitOfWork.CommitAsync();
-            
+
             return entity.Id;
         }
     }

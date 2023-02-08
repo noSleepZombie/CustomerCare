@@ -1,5 +1,3 @@
-using System.ComponentModel.DataAnnotations.Schema;
-
 namespace CustomerCare.Domain.Entities
 {
     public class User
@@ -11,6 +9,7 @@ namespace CustomerCare.Domain.Entities
         public string Name { get; set; } = string.Empty;
         public string Phone { get; set; } = string.Empty;
         public string Email { get; set; } = string.Empty;
+        public virtual Address Address { get; set; } = new();
         public DateTime CreatedAt { get; set; }
         public DateTime ModifiedAt { get; set; }
     }

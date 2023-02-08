@@ -7,6 +7,7 @@ namespace CustomerCare.Infrastructure.UnitOfWork
     {
         private readonly IApplicationContext context;
         private readonly IUserRepository userRepository;
+        private readonly IAddressRepository addressRepository;
 
         public UnitOfWork(IApplicationContext context)
         {
@@ -16,6 +17,11 @@ namespace CustomerCare.Infrastructure.UnitOfWork
         public IUserRepository UserRepository
         {
             get => userRepository ?? new UserRepository(context);
+        }
+
+        public IAddressRepository AddressRepository
+        {
+            get => addressRepository ?? new AddressRepository(context);
         }
 
         public async Task CommitAsync() => await context.SaveChangesAsync();

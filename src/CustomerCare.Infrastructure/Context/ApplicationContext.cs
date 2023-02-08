@@ -12,6 +12,7 @@ namespace CustomerCare.Infrastructure.Context
         }
 
         public DbSet<User> Users { get; set; }
+        public DbSet<Address> Addresses { get; set; }
 
         public override DbSet<TEntity> Set<TEntity>() where TEntity : class => base.Set<TEntity>();
 

@@ -8,6 +8,7 @@ using CustomerCare.Infrastructure.Repositories;
 using CustomerCare.Infrastructure.UnitOfWork;
 using FluentValidation;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.FileProviders;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -43,6 +44,14 @@ app.UseAuthorization();
 app.UseMiddleware<ExceptionMiddleware>();
 
 app.MapControllers();
+
+app.UseFileServer(new FileServerOptions
+{
+    FileProvider = new PhysicalFileProvider(
+        Path.Combine(Directory.GetCurrentDirectory(), "Site")),
+    RequestPath = "/site",
+    EnableDefaultFiles = true
+});
 
 app.Run();
 

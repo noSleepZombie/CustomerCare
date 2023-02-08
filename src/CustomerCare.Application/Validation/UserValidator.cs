@@ -36,6 +36,10 @@ namespace CustomerCare.Application.Validations
                 .WithMessage("Telefone inválido")
                 .Must(phone => !Regex.IsMatch(phone, "[^\\d]"))
                 .WithMessage("Telefone inváliod");
+
+            RuleFor(user => user.Address)
+                .NotEmpty()
+                .WithMessage("O endereço é obrigatório");
         }
     }
 }
