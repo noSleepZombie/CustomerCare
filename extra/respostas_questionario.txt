@@ -1,0 +1,14 @@
+1. A solução deve ser disponibilizada em Cloud ou On-premise?
+R: Deve ser disponibilizada em cloud por conta da necessidade de escalabilidade
+
+2. Considerando a participação de 4 pessoas técnicas para o desenvolvimento dessa solução, responda qual ferramenta acreditas ser apropriada para o controle de tarefas da equipe, a ferramenta é ágil?
+R: O Azure DevOps é uma boa opção para o controle das tarefas, tem bom suporte ao Scrum, permite detalhar bem as features, estórias e tarefas, possui um kanban customizável.
+
+3. Você se sente capaz de liderar esta equipe? Por quê?
+R: Sim, mas por ser uma primeira experiência liderando uma equipe haveria uma curva de aprendizado. 
+
+4. Se pudesse sugerir uma melhoria, mudança ou oportunidade. O que seria?
+R: Seria necessário conhecer mais sobre o negócio e o projeto, não tenho informações suficientes para saber o que pode ser feito diferente.
+
+5. Acha válido esse desafio para o processo que está participando?
+R: Sim, bem válido. O desafio é aparentemente simples mas testa vários conhecimentos relevantes do desenvolvedor, como padrões, qualidade do código, legibilidade do código, organização, entre outros.
