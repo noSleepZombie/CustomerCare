@@ -351,3 +351,8 @@ MigrationBackup/
 
 # VS Code specific folder 
 .vscode
+
+# SQLite Database Files
+*.db
+*.db-shm
+*.db-wal
